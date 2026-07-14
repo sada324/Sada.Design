@@ -339,23 +339,13 @@
     display:flex;justify-content:center;align-items:center;
     margin-top:80px;
   }
-  .badge-wrap svg{width:100%;max-width:280px;height:auto;}
-  .badge-wrap circle{
-    fill:none;stroke:var(--line-strong);stroke-width:1.4;
+  .badge-circle{
+    width:100%;max-width:280px;aspect-ratio:1/1;
+    border-radius:50%;overflow:hidden;
   }
-  .badge-wrap path, .badge-wrap ellipse{
-    fill:none;stroke:var(--off-white);stroke-width:2.4;
-    stroke-linecap:round;stroke-linejoin:round;
-  }
-  .badge-wrap .fill{fill:var(--off-white);stroke:none;}
-  .badge-wrap text{
-    font-family:var(--display);font-weight:800;
-    fill:var(--off-white);text-anchor:middle;
-    letter-spacing:0.04em;text-transform:uppercase;
-  }
-  .badge-wrap .badge-sub{
-    font-family:var(--mono);font-weight:500;font-size:13px;
-    fill:var(--gray);letter-spacing:0.14em;
+  .badge-circle img{
+    width:100%;height:100%;object-fit:cover;
+    transform:scale(1.14);display:block;
   }
   .badge-caption{
     margin-top:20px;text-align:center;
@@ -407,7 +397,7 @@
 
   <a class="venture reveal" href="#custom-labs" style="display:grid;">
     <div class="venture-name">Custom Labs <span style="font-family:var(--mono);font-size:12px;font-weight:400;color:var(--gray);text-transform:none;letter-spacing:0.05em;">→</span></div>
-    <div class="venture-desc">A group of design-led companies turning ideas into real products — from concept development, CAD and Blender visualization to prototyping, manufacturing, branding and launch. Includes Custom514 and our growing portfolio of ventures.</div>
+    <div class="venture-desc">The creative venture studio behind the companies I build — where ideas evolve from early concepts into products and businesses through industrial design, CAD engineering, Blender visualization, prototyping, manufacturing, branding, launch, and long-term growth.</div>
     <div class="venture-tags">Hardware<br>Manufacturing<br>Retail</div>
   </a>
   <div class="venture reveal">
@@ -627,13 +617,13 @@
 </nav>
 
 <section class="hero-sy">
-  <div class="hero-eyebrow">Custom Labs — Design &amp; Manufacturing Group</div>
+  <div class="hero-eyebrow">Custom Labs — Creative Venture Studio</div>
   <h1>Custom Labs</h1>
   <p class="hero-tagline">
-    A group of design-led companies turning ideas into real products —
-    <b>from concept development, CAD and Blender visualization to
-    prototyping, manufacturing, branding and launch.</b> Includes Custom514
-    and our growing portfolio of ventures.
+    <b>The creative venture studio behind the companies I build</b> — where
+    ideas evolve from early concepts into products and businesses through
+    industrial design, CAD engineering, Blender visualization, prototyping,
+    manufacturing, branding, launch, and long-term growth.
   </p>
 </section>
 
@@ -683,19 +673,9 @@
   </div>
 
   <div class="badge-wrap reveal">
-    <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="150" cy="150" r="144" />
-      <path d="M 108 128 C 108 100, 130 78, 165 78 C 200 78, 222 98, 224 122" />
-      <path d="M 88 148 C 90 116, 122 92, 165 92 C 205 92, 232 108, 236 132 C 236 138, 230 142, 222 140 L 100 152 C 92 153, 87 150, 88 148 Z" />
-      <ellipse class="fill" cx="140" cy="176" rx="6" ry="9" />
-      <ellipse class="fill" cx="190" cy="172" rx="6" ry="9" />
-      <path d="M 120 190 C 122 198, 130 202, 138 198" />
-      <path d="M 226 168 C 236 168, 242 176, 240 186 C 238 195, 228 198, 220 193" />
-      <path d="M 108 152 C 100 190, 118 224, 158 228 C 196 231, 222 208, 220 176" />
-      <text x="168" y="112" font-size="26" font-family="var(--mono)" letter-spacing="0.06em">514</text>
-      <text x="150" y="248" font-size="46">Custom</text>
-      <text class="badge-sub" x="150" y="278" text-anchor="middle">— 5 1 4 —</text>
-    </svg>
+    <div class="badge-circle">
+      <img src="Custom514.png" alt="Custom514 logo">
+    </div>
   </div>
   <p class="badge-caption reveal">Custom514 — one of the companies under Custom Labs</p>
 </section>
