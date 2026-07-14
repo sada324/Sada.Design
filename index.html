@@ -332,6 +332,26 @@
   }
 
   #page-sy{display:none;}
+  #page-custom-labs{display:none;}
+
+  /* ---- PORTFOLIO / LOGO BADGE (custom labs page) ---- */
+  .badge-wrap{
+    display:flex;justify-content:center;align-items:center;
+    margin-top:80px;
+  }
+  .badge-circle{
+    width:100%;max-width:280px;aspect-ratio:1/1;
+    border-radius:50%;overflow:hidden;
+  }
+  .badge-circle img{
+    width:100%;height:100%;object-fit:cover;
+    transform:scale(1.14);display:block;
+  }
+  .badge-caption{
+    margin-top:20px;text-align:center;
+    font-family:var(--mono);font-size:12px;color:var(--gray);
+    letter-spacing:0.08em;text-transform:uppercase;
+  }
 </style>
 </head>
 <body>
@@ -375,11 +395,11 @@
     <h2>What I build.</h2>
   </div>
 
-  <div class="venture reveal">
-    <div class="venture-name">Custom Labs</div>
-    <div class="venture-desc">Print-on-demand and custom 3D printed goods — LED signs, décor, functional parts. From file to shipped object.</div>
+  <a class="venture reveal" href="#custom-labs" style="display:grid;">
+    <div class="venture-name">Custom Labs <span style="font-family:var(--mono);font-size:12px;font-weight:400;color:var(--gray);text-transform:none;letter-spacing:0.05em;">→</span></div>
+    <div class="venture-desc">The creative venture studio behind the companies I build — where ideas evolve from early concepts into products and businesses through industrial design, CAD engineering, Blender visualization, prototyping, manufacturing, branding, launch, and long-term growth.</div>
     <div class="venture-tags">Hardware<br>Manufacturing<br>Retail</div>
-  </div>
+  </a>
   <div class="venture reveal">
     <div class="venture-name">Revenü</div>
     <div class="venture-desc">Growth consulting for small businesses — websites, ads, and the systems that turn attention into revenue.</div>
@@ -480,7 +500,7 @@
   <div class="contact-grid">
     <div>
       <div class="col-label">Ventures</div>
-      <a href="#work">Custom Labs</a>
+      <a href="#custom-labs">Custom Labs</a>
       <a href="#work">Revenü</a>
       <a href="#sy">SY Mark 1</a>
     </div>
@@ -588,6 +608,91 @@
 
 </div>
 
+<!-- ============ PAGE: CUSTOM LABS ============ -->
+<div id="page-custom-labs">
+
+<nav>
+  <a class="back" href="#home">← Sada Sy</a>
+  <span class="tag">Custom Labs</span>
+</nav>
+
+<section class="hero-sy">
+  <div class="hero-eyebrow">Custom Labs — Creative Venture Studio</div>
+  <h1>Custom Labs</h1>
+  <p class="hero-tagline">
+    <b>The creative venture studio behind the companies I build</b> — where
+    ideas evolve from early concepts into products and businesses through
+    industrial design, CAD engineering, Blender visualization, prototyping,
+    manufacturing, branding, launch, and long-term growth.
+  </p>
+</section>
+
+<section id="cl-process">
+  <div class="section-head reveal">
+    <span class="label">The Process</span>
+    <h2>Idea to shelf.</h2>
+  </div>
+
+  <div class="spec-row reveal">
+    <div class="spec-num">01</div>
+    <div class="spec-name">Concept Development</div>
+    <div class="spec-detail">Sourcing and shaping ideas worth building — scoped for real demand, not novelty.</div>
+  </div>
+  <div class="spec-row reveal">
+    <div class="spec-num">02</div>
+    <div class="spec-name">CAD &amp; Blender Visualization</div>
+    <div class="spec-detail">Full 3D modeling and render pipeline — form, fit, and finish resolved before a part is ever printed.</div>
+  </div>
+  <div class="spec-row reveal">
+    <div class="spec-num">03</div>
+    <div class="spec-name">Prototyping</div>
+    <div class="spec-detail">Rapid iteration on real hardware — printed, tested, and refined until it's right.</div>
+  </div>
+  <div class="spec-row reveal">
+    <div class="spec-num">04</div>
+    <div class="spec-name">Manufacturing</div>
+    <div class="spec-detail">Print-on-demand and small-batch production, built to scale without sacrificing quality.</div>
+  </div>
+  <div class="spec-row reveal">
+    <div class="spec-num">05</div>
+    <div class="spec-name">Branding &amp; Launch</div>
+    <div class="spec-detail">Identity, packaging, and go-to-market — the whole first impression, not just the object.</div>
+  </div>
+</section>
+
+<section id="cl-portfolio">
+  <div class="section-head reveal">
+    <span class="label">Our Companies</span>
+    <h2>What we run.</h2>
+  </div>
+
+  <div class="spec-row reveal">
+    <div class="spec-num">01</div>
+    <div class="spec-name">Custom514</div>
+    <div class="spec-detail">Print-on-demand and custom 3D printed goods — LED signs, décor, functional parts. From file to shipped object.</div>
+  </div>
+
+  <div class="badge-wrap reveal">
+    <div class="badge-circle">
+      <img src="Custom514.png" alt="Custom514 logo">
+    </div>
+  </div>
+  <p class="badge-caption reveal">Custom514 — one of the companies under Custom Labs</p>
+</section>
+
+<section id="cl-contact" class="contact contact-sy">
+  <span class="label" style="font-family:var(--mono);font-size:12px;letter-spacing:0.14em;color:var(--gray);text-transform:uppercase;">Work with us</span>
+  <h2>Let's build<br>it right.</h2>
+  <a class="contact-link" href="mailto:hello@sadasy.com">hello@sadasy.com →</a>
+</section>
+
+<footer>
+  <span>© 2026 Custom Labs</span>
+  <span><a href="#home">Back to Sada Sy</a></span>
+</footer>
+
+</div>
+
 <script>
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
@@ -600,7 +705,10 @@
 
   function route(){
     const home = document.getElementById('page-home');
-    const sy = document.getElementById('page-sy');
+    const subPages = {
+      '#sy': document.getElementById('page-sy'),
+      '#custom-labs': document.getElementById('page-custom-labs'),
+    };
     const hash = location.hash;
     const scrollToTop = ()=>{
       const html = document.documentElement;
@@ -616,12 +724,14 @@
       requestAnimationFrame(scrollToTop);
     };
 
-    if(hash === '#sy'){
+    const activePage = subPages[hash];
+    Object.values(subPages).forEach(page=>{ page.style.display = 'none'; });
+
+    if(activePage){
       home.style.display = 'none';
-      sy.style.display = 'block';
+      activePage.style.display = 'block';
       resetTop();
     } else {
-      sy.style.display = 'none';
       home.style.display = 'block';
 
       if(hash && hash !== '#home'){
