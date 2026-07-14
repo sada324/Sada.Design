@@ -332,6 +332,36 @@
   }
 
   #page-sy{display:none;}
+  #page-custom-labs{display:none;}
+
+  /* ---- PORTFOLIO / LOGO BADGE (custom labs page) ---- */
+  .badge-wrap{
+    display:flex;justify-content:center;align-items:center;
+    margin-top:80px;
+  }
+  .badge-wrap svg{width:100%;max-width:280px;height:auto;}
+  .badge-wrap circle{
+    fill:none;stroke:var(--line-strong);stroke-width:1.4;
+  }
+  .badge-wrap path, .badge-wrap ellipse{
+    fill:none;stroke:var(--off-white);stroke-width:2.4;
+    stroke-linecap:round;stroke-linejoin:round;
+  }
+  .badge-wrap .fill{fill:var(--off-white);stroke:none;}
+  .badge-wrap text{
+    font-family:var(--display);font-weight:800;
+    fill:var(--off-white);text-anchor:middle;
+    letter-spacing:0.04em;text-transform:uppercase;
+  }
+  .badge-wrap .badge-sub{
+    font-family:var(--mono);font-weight:500;font-size:13px;
+    fill:var(--gray);letter-spacing:0.14em;
+  }
+  .badge-caption{
+    margin-top:20px;text-align:center;
+    font-family:var(--mono);font-size:12px;color:var(--gray);
+    letter-spacing:0.08em;text-transform:uppercase;
+  }
 </style>
 </head>
 <body>
@@ -375,11 +405,11 @@
     <h2>What I build.</h2>
   </div>
 
-  <div class="venture reveal">
-    <div class="venture-name">Custom Labs</div>
-    <div class="venture-desc">Print-on-demand and custom 3D printed goods — LED signs, décor, functional parts. From file to shipped object.</div>
+  <a class="venture reveal" href="#custom-labs" style="display:grid;">
+    <div class="venture-name">Custom Labs <span style="font-family:var(--mono);font-size:12px;font-weight:400;color:var(--gray);text-transform:none;letter-spacing:0.05em;">→</span></div>
+    <div class="venture-desc">A group of design-led companies turning ideas into real products — from concept development, CAD and Blender visualization to prototyping, manufacturing, branding and launch. Includes Custom514 and our growing portfolio of ventures.</div>
     <div class="venture-tags">Hardware<br>Manufacturing<br>Retail</div>
-  </div>
+  </a>
   <div class="venture reveal">
     <div class="venture-name">Revenü</div>
     <div class="venture-desc">Growth consulting for small businesses — websites, ads, and the systems that turn attention into revenue.</div>
@@ -480,7 +510,7 @@
   <div class="contact-grid">
     <div>
       <div class="col-label">Ventures</div>
-      <a href="#work">Custom Labs</a>
+      <a href="#custom-labs">Custom Labs</a>
       <a href="#work">Revenü</a>
       <a href="#sy">SY Mark 1</a>
     </div>
@@ -588,6 +618,101 @@
 
 </div>
 
+<!-- ============ PAGE: CUSTOM LABS ============ -->
+<div id="page-custom-labs">
+
+<nav>
+  <a class="back" href="#home">← Sada Sy</a>
+  <span class="tag">Custom Labs</span>
+</nav>
+
+<section class="hero-sy">
+  <div class="hero-eyebrow">Custom Labs — Design &amp; Manufacturing Group</div>
+  <h1>Custom Labs</h1>
+  <p class="hero-tagline">
+    A group of design-led companies turning ideas into real products —
+    <b>from concept development, CAD and Blender visualization to
+    prototyping, manufacturing, branding and launch.</b> Includes Custom514
+    and our growing portfolio of ventures.
+  </p>
+</section>
+
+<section id="cl-process">
+  <div class="section-head reveal">
+    <span class="label">The Process</span>
+    <h2>Idea to shelf.</h2>
+  </div>
+
+  <div class="spec-row reveal">
+    <div class="spec-num">01</div>
+    <div class="spec-name">Concept Development</div>
+    <div class="spec-detail">Sourcing and shaping ideas worth building — scoped for real demand, not novelty.</div>
+  </div>
+  <div class="spec-row reveal">
+    <div class="spec-num">02</div>
+    <div class="spec-name">CAD &amp; Blender Visualization</div>
+    <div class="spec-detail">Full 3D modeling and render pipeline — form, fit, and finish resolved before a part is ever printed.</div>
+  </div>
+  <div class="spec-row reveal">
+    <div class="spec-num">03</div>
+    <div class="spec-name">Prototyping</div>
+    <div class="spec-detail">Rapid iteration on real hardware — printed, tested, and refined until it's right.</div>
+  </div>
+  <div class="spec-row reveal">
+    <div class="spec-num">04</div>
+    <div class="spec-name">Manufacturing</div>
+    <div class="spec-detail">Print-on-demand and small-batch production, built to scale without sacrificing quality.</div>
+  </div>
+  <div class="spec-row reveal">
+    <div class="spec-num">05</div>
+    <div class="spec-name">Branding &amp; Launch</div>
+    <div class="spec-detail">Identity, packaging, and go-to-market — the whole first impression, not just the object.</div>
+  </div>
+</section>
+
+<section id="cl-portfolio">
+  <div class="section-head reveal">
+    <span class="label">Our Companies</span>
+    <h2>What we run.</h2>
+  </div>
+
+  <div class="spec-row reveal">
+    <div class="spec-num">01</div>
+    <div class="spec-name">Custom514</div>
+    <div class="spec-detail">Print-on-demand and custom 3D printed goods — LED signs, décor, functional parts. From file to shipped object.</div>
+  </div>
+
+  <div class="badge-wrap reveal">
+    <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="150" cy="150" r="144" />
+      <path d="M 108 128 C 108 100, 130 78, 165 78 C 200 78, 222 98, 224 122" />
+      <path d="M 88 148 C 90 116, 122 92, 165 92 C 205 92, 232 108, 236 132 C 236 138, 230 142, 222 140 L 100 152 C 92 153, 87 150, 88 148 Z" />
+      <ellipse class="fill" cx="140" cy="176" rx="6" ry="9" />
+      <ellipse class="fill" cx="190" cy="172" rx="6" ry="9" />
+      <path d="M 120 190 C 122 198, 130 202, 138 198" />
+      <path d="M 226 168 C 236 168, 242 176, 240 186 C 238 195, 228 198, 220 193" />
+      <path d="M 108 152 C 100 190, 118 224, 158 228 C 196 231, 222 208, 220 176" />
+      <text x="168" y="112" font-size="26" font-family="var(--mono)" letter-spacing="0.06em">514</text>
+      <text x="150" y="248" font-size="46">Custom</text>
+      <text class="badge-sub" x="150" y="278" text-anchor="middle">— 5 1 4 —</text>
+    </svg>
+  </div>
+  <p class="badge-caption reveal">Custom514 — one of the companies under Custom Labs</p>
+</section>
+
+<section id="cl-contact" class="contact contact-sy">
+  <span class="label" style="font-family:var(--mono);font-size:12px;letter-spacing:0.14em;color:var(--gray);text-transform:uppercase;">Work with us</span>
+  <h2>Let's build<br>it right.</h2>
+  <a class="contact-link" href="mailto:hello@sadasy.com">hello@sadasy.com →</a>
+</section>
+
+<footer>
+  <span>© 2026 Custom Labs</span>
+  <span><a href="#home">Back to Sada Sy</a></span>
+</footer>
+
+</div>
+
 <script>
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
@@ -600,7 +725,10 @@
 
   function route(){
     const home = document.getElementById('page-home');
-    const sy = document.getElementById('page-sy');
+    const subPages = {
+      '#sy': document.getElementById('page-sy'),
+      '#custom-labs': document.getElementById('page-custom-labs'),
+    };
     const hash = location.hash;
     const scrollToTop = ()=>{
       const html = document.documentElement;
@@ -616,12 +744,14 @@
       requestAnimationFrame(scrollToTop);
     };
 
-    if(hash === '#sy'){
+    const activePage = subPages[hash];
+    Object.values(subPages).forEach(page=>{ page.style.display = 'none'; });
+
+    if(activePage){
       home.style.display = 'none';
-      sy.style.display = 'block';
+      activePage.style.display = 'block';
       resetTop();
     } else {
-      sy.style.display = 'none';
       home.style.display = 'block';
 
       if(hash && hash !== '#home'){
