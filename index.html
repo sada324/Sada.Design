@@ -132,6 +132,12 @@
     font-size:clamp(16px,2vw,19px);line-height:1.6;color:#c9c9c4;font-weight:300;
   }
   .hero-tagline b{color:var(--off-white);font-weight:500;}
+  #page-sy #sy-demo{padding-bottom:36px;}
+  #page-sy .hero-sy{
+    min-height:auto;
+    padding-top:36px;
+    padding-bottom:88px;
+  }
   /* ---- SECTION SHARED ---- */
   section{
     padding:120px clamp(20px,5vw,64px);
@@ -784,6 +790,14 @@
       }
     }
   }
+  document.querySelectorAll('a[href="#sy"]').forEach(link=>{
+    link.addEventListener('click', ()=>{
+      const syVideo = document.querySelector('#page-sy video');
+      if(!syVideo) return;
+      syVideo.muted = false;
+      requestAnimationFrame(()=>syVideo.play().catch(()=>{}));
+    });
+  });
   window.addEventListener('hashchange', route);
   route();
 </script>
