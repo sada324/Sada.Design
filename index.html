@@ -398,7 +398,7 @@
   </h1>
   <p class="hero-sub">
     Turning ideas into products through design, prototyping, manufacturing,
-    and real-world validation. <b>Custom Labs. BWP Buildwithpeople. SY Mark 1.</b><br>
+    and real-world validation. <b>Custom Labs. BWP. SY Mark 1.</b><br>
     I design products, systems, and everything in between.
   </p>
   <div class="hero-footer">
@@ -419,8 +419,8 @@
     <div class="venture-tags">Hardware<br>Manufacturing<br>Retail</div>
   </a>
   <a class="venture reveal" href="https://buildwithpeople.com" target="_blank" rel="noopener noreferrer">
-    <div class="venture-name">BWP Buildwithpeople</div>
-    <div class="venture-desc">Growth consulting for small businesses — websites, ads, and the systems that turn attention into revenue.</div>
+    <div class="venture-name">BWP</div>
+    <div class="venture-desc">Build With People — growth consulting for small businesses, including websites, ads, and the systems that turn attention into revenue.</div>
     <div class="venture-tags">Consulting<br>Growth<br>Strategy</div>
   </a>
   <a class="venture reveal" href="#sy" style="display:grid;">
@@ -521,7 +521,7 @@
     <div>
       <div class="col-label">Ventures</div>
       <a href="#custom-labs">Custom Labs</a>
-      <a href="https://buildwithpeople.com" target="_blank" rel="noopener noreferrer">BWP Buildwithpeople</a>
+      <a href="https://buildwithpeople.com" target="_blank" rel="noopener noreferrer">BWP</a>
       <a href="#sy">SY Mark 1</a>
     </div>
     <div>
@@ -554,11 +554,11 @@
 </nav>
 
 <section id="sy-demo">
-  <div class="section-head reveal">
+  <div class="section-head">
     <span class="label">Prototype in motion</span>
     <h2>Mark 1 Demo.</h2>
   </div>
-  <div class="demo-video-wrap reveal">
+  <div class="demo-video-wrap">
     <video class="demo-video" autoplay muted loop controls playsinline preload="auto">
       <source src="mark-1-demo.mp4" type="video/mp4">
       Your browser does not support embedded video.
@@ -763,9 +763,16 @@
     if(activePage){
       home.style.display = 'none';
       activePage.style.display = 'block';
+      const syVideo = document.querySelector('#page-sy video');
+      if(hash === '#sy' && syVideo){
+        syVideo.currentTime = 0;
+        syVideo.play().catch(()=>{});
+      }
       resetTop();
     } else {
       home.style.display = 'block';
+      const syVideo = document.querySelector('#page-sy video');
+      if(syVideo) syVideo.pause();
 
       if(hash && hash !== '#home'){
         requestAnimationFrame(()=>{
